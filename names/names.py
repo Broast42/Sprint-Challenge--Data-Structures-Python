@@ -25,6 +25,7 @@ for name_1 in names_1:
 
 end_time = time.time()
 #print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
+duplicates.print_values()
 print (f"runtime: {end_time - start_time} seconds")
 
 # ---------- Stretch Goal -----------

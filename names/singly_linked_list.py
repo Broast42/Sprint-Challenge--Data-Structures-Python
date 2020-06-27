@@ -73,3 +73,11 @@ class LinkedList:
             length +=1
             current_node = current_node.next_node
         return length
+
+    def print_values(self):
+        node = self.head
+        value_list = ""
+        while node.next_node is not None:
+            value_list += ", " + node.value
+            node = node.next_node
+        print(value_list)
