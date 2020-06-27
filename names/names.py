@@ -3,6 +3,8 @@ from singly_linked_list import LinkedList
 
 start_time = time.time()
 
+list1 = LinkedList()
+
 f = open('names_1.txt', 'r')
 names_1 = f.read().split("\n")  # List containing 10000 names
 f.close()
@@ -11,23 +13,14 @@ f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-duplicates = LinkedList()  # Return the list of duplicates in this data structure
+#duplicates = []  # Return the list of duplicates in this data structure
+duplicates = LinkedList()
 
-# Replace the nested for loops below with your improvements
-# for name_1 in names_1:
-#     for name_2 in names_2:
-#         if name_1 == name_2:
-#             duplicates.append(name_1)
-name_l1 = LinkedList()
-name_l2 = LinkedList()
-for x in names_1:
-    name_l1.add_to_tail(x)
-for x in names_2:
-    name_l2.add_to_tail(x)
-
-for name in names_1:
-    if name_l2.contains(name):
-        duplicates.add_to_tail(name)
+#Replace the nested for loops below with your improvements
+for name_1 in names_1:
+    for name_2 in names_2:
+        if name_1 == name_2:
+            duplicates.add_to_head(name_1)
 
 
 end_time = time.time()
